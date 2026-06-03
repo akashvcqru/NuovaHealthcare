@@ -31,7 +31,7 @@ export default function Logo({ showText = true, className = "", variant = "defau
         <div className="relative flex items-center justify-start py-1">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo-footer.jpg"
+            src="/logo-footer.png"
             alt="Nuova Healthcare Logo"
             className="h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
