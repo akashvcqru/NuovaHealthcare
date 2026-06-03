@@ -8,10 +8,10 @@ interface LogoProps {
 }
 
 export default function Logo({ showText = true, className = "", variant = "default" }: LogoProps) {
-  if (variant === "header") {
+  if (variant === "header" || variant === "footer") {
     return (
       <Link href="/" className={`flex items-center gap-3 group ${className}`}>
-        {/* Logo Image used as-is, strictly for the header, no SVG */}
+        {/* Logo Image used as-is, strictly for the header/footer, no SVG */}
         <div className="relative flex items-center justify-start py-1">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
