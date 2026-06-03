@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Column 1: Brand Info */}
           <div className="lg:col-span-2 flex flex-col gap-5">
-            <Logo variant="footer" showText={true} className="invert brightness-0" />
+            <Logo variant="footer" showText={true} className="" />
             <p className="text-sm text-gray-400 max-w-sm">
               Nuova Healthcare is an international award-winning veterinary-focused eCommerce platform. We source only premium, clinical-grade nutrition and healthcare products to ensure your pets live their happiest, healthiest lives.
             </p>

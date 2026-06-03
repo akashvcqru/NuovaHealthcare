@@ -8,16 +8,32 @@ interface LogoProps {
 }
 
 export default function Logo({ showText = true, className = "", variant = "default" }: LogoProps) {
-  if (variant === "header" || variant === "footer") {
+  if (variant === "header") {
     return (
       <Link href="/" className={`flex items-center gap-3 group ${className}`}>
-        {/* Logo Image used as-is, strictly for the header/footer, no SVG */}
+        {/* Logo Image used as-is, strictly for the header, no SVG */}
         <div className="relative flex items-center justify-start py-1">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/logo.png"
             alt="Nuova Healthcare Logo"
             className="h-11 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+      </Link>
+    );
+  }
+
+  if (variant === "footer") {
+    return (
+      <Link href="/" className={`flex items-center gap-3 group ${className}`}>
+        {/* Logo Image used as-is, strictly for the footer, no SVG */}
+        <div className="relative flex items-center justify-start py-1">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-footer.jpg"
+            alt="Nuova Healthcare Logo"
+            className="h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </div>
       </Link>
