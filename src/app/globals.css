@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #01375B;
+  --color-brand-primary-hover: #002c4a;
+  --color-brand-secondary: #2ECAB2;
+  --color-brand-secondary-hover: #23b39d;
+  --color-brand-accent: #3DCB63;
+  --color-brand-dark: #0B1E2D;
+  --color-brand-light: #F8FAFC;
+  
+  --font-sans: var(--font-montserrat), sans-serif;
+  --font-heading: var(--font-montserrat), sans-serif;
+  --font-body: var(--font-montserrat), sans-serif;
+  
+  --animate-fade-in-up: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-scale-in: scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-pulse-subtle: pulse-subtle 3s infinite ease-in-out;
+  --animate-ticker: ticker 25s linear infinite;
+  
+  --shadow-premium: 0 10px 30px -10px rgba(1, 55, 91, 0.08), 0 1px 3px rgba(1, 55, 91, 0.02);
+  --shadow-premium-hover: 0 20px 40px -15px rgba(1, 55, 91, 0.15), 0 1px 5px rgba(1, 55, 91, 0.05);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.96;
+    transform: scale(0.98);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #0B1E2D;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Hide scrollbars but allow scrolling for slider elements */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hero gradient overlays */
+.hero-gradient {
+  background-image: linear-gradient(135deg, rgba(1, 55, 91, 0.05) 0%, rgba(46, 202, 178, 0.05) 100%);
+}
+
+.healthcare-gradient {
+  background: linear-gradient(135deg, #01375B 0%, #00223A 100%);
+}
+
+/* Custom card scale transition */
+.product-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product-card-hover:hover {
+  transform: translateY(-6px);
+}
