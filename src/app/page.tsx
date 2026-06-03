@@ -642,7 +642,7 @@ export default function Homepage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
-              quote: "The low-fat gastro diet completely healed my Golden Retriever's stomach issues within a week. I cannot recommend VetPet Galleria enough for their fast delivery and vet-checked products.",
+              quote: "The low-fat gastro diet completely healed my Golden Retriever's stomach issues within a week. I cannot recommend Nuova Healthcare enough for their fast delivery and vet-checked products.",
               name: "Eleanor Vance",
               pet: "Owner of Cooper (Golden Retriever)",
               rating: 5

@@ -8,26 +8,12 @@ interface LogoProps {
 }
 
 export default function Logo({ showText = true, className = "", variant = "default" }: LogoProps) {
-  if (variant === "header") {
-    return (
-      <Link href="/" className={`flex items-center gap-3 group ${className}`}>
-        {/* Logo Image used as-is, strictly for the header, no SVG */}
-        <div className="relative flex items-center justify-start py-1">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/logo.png"
-            alt="VetPet Galleria Logo"
-            className="h-11 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-          />
-        </div>
-      </Link>
-    );
-  }
+  const isHeader = variant === "header";
 
   return (
     <Link href="/" className={`flex items-center gap-3 group ${className}`}>
       {/* Premium SVG Icon */}
-      <div className="relative w-10 h-10 flex-shrink-0">
+      <div className={`relative flex-shrink-0 ${isHeader ? "w-10 h-10 md:w-11 md:h-11" : "w-10 h-10"}`}>
         <svg
           viewBox="0 0 100 100"
           className="w-full h-full transform transition-transform duration-500 group-hover:rotate-12"
@@ -69,12 +55,12 @@ export default function Logo({ showText = true, className = "", variant = "defau
 
       {/* Brand Text */}
       {showText && (
-        <div className="flex flex-col select-none">
-          <span className="font-heading font-bold text-xl leading-tight text-brand-primary transition-colors duration-300 group-hover:text-brand-primary-hover">
-            VetPet
+        <div className="flex flex-col select-none text-left">
+          <span className={`font-heading font-bold leading-tight text-brand-primary transition-colors duration-300 group-hover:text-brand-primary-hover ${isHeader ? "text-xl md:text-2xl" : "text-xl"}`}>
+            Nuova
           </span>
-          <span className="text-[10px] font-sans tracking-[0.25em] font-semibold text-brand-secondary uppercase leading-none">
-            Galleria
+          <span className={`text-[10px] font-sans tracking-[0.25em] font-semibold text-brand-secondary uppercase leading-none ${isHeader ? "text-[9px] md:text-[10px]" : "text-[10px]"}`}>
+            Healthcare
           </span>
         </div>
       )}

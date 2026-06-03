@@ -137,7 +137,7 @@ export default function BlogHubPage() {
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-brand-secondary" />
             <h1 className="font-heading font-bold text-2xl text-brand-primary">
-              VetPet Care Blog
+              Nuova Healthcare Blog
             </h1>
           </div>
           <p className="text-xs text-gray-500 max-w-sm text-center sm:text-right font-medium">

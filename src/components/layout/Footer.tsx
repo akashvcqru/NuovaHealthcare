@@ -68,7 +68,7 @@ export default function Footer() {
           <div className="lg:col-span-2 flex flex-col gap-5">
             <Logo showText={true} className="invert brightness-0" />
             <p className="text-sm text-gray-400 max-w-sm">
-              VetPet Galleria is an international award-winning veterinary-focused eCommerce platform. We source only premium, clinical-grade nutrition and healthcare products to ensure your pets live their happiest, healthiest lives.
+              Nuova Healthcare is an international award-winning veterinary-focused eCommerce platform. We source only premium, clinical-grade nutrition and healthcare products to ensure your pets live their happiest, healthiest lives.
             </p>
             <div className="flex items-center gap-4 text-gray-400">
               <Link href="https://facebook.com" aria-label="Facebook" className="hover:text-brand-secondary transition-colors">
@@ -132,7 +132,7 @@ export default function Footer() {
 
           {/* Newsletter Box */}
           <div className="w-full md:w-auto flex flex-col gap-3">
-            <h4 className="text-sm font-semibold text-white">Join the VetPet Newsletter</h4>
+            <h4 className="text-sm font-semibold text-white">Join the Nuova Healthcare Newsletter</h4>
             <p className="text-xs text-gray-400">Get updates on veterinarian advice, seasonal products, and VIP discount coupons.</p>
             <form onSubmit={handleSubscribe} className="flex max-w-md w-full relative">
               <input
@@ -160,7 +160,7 @@ export default function Footer() {
 
           {/* Copyright & Pay Badges */}
           <div className="flex flex-col items-center md:items-end gap-3 text-center md:text-right">
-            <p>© {new Date().getFullYear()} VetPet Galleria Inc. All Rights Reserved.</p>
+            <p>© {new Date().getFullYear()} Nuova Healthcare Inc. All Rights Reserved.</p>
             <p>Designed with ❤️ for premium pet health and wellness.</p>
 
             {/* Accepted Payments mock */}

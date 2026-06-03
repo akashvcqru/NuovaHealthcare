@@ -13,12 +13,12 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "VetPet Galleria | India's Premium Pet Supplies & Healthcare",
-  description: "VetPet Galleria is India's premium pet eCommerce platform offering veterinary-approved pet food, treats, healthcare, grooming essentials, and toys for dogs, cats, birds, fish, and small pets.",
+  title: "Nuova Healthcare | India's Premium Pet Supplies & Healthcare",
+  description: "Nuova Healthcare is India's premium pet eCommerce platform offering veterinary-approved pet food, treats, healthcare, grooming essentials, and toys for dogs, cats, birds, fish, and small pets.",
   keywords: "pet food, pet healthcare, vet products, dog food, cat food, premium pet toys, grooming essentials, bird supplies, india pet shop",
-  authors: [{ name: "VetPet Galleria India Team" }],
+  authors: [{ name: "Nuova Healthcare India Team" }],
   openGraph: {
-    title: "VetPet Galleria | India's Premium Pet Supplies & Healthcare",
+    title: "Nuova Healthcare | India's Premium Pet Supplies & Healthcare",
     description: "Your trusted destination for premium veterinary-approved pet food, health, and grooming supplies in India.",
     type: "website",
     locale: "en_IN",

@@ -89,11 +89,11 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
   
   // Hydration guard to load from local storage safely on client mount
   useEffect(() => {
-    const savedCart = localStorage.getItem("vetpet_cart");
-    const savedWishlist = localStorage.getItem("vetpet_wishlist");
-    const savedRecently = localStorage.getItem("vetpet_recently_viewed");
-    const savedUser = localStorage.getItem("vetpet_user");
-    const savedOrders = localStorage.getItem("vetpet_orders");
+    const savedCart = localStorage.getItem("nuova_cart");
+    const savedWishlist = localStorage.getItem("nuova_wishlist");
+    const savedRecently = localStorage.getItem("nuova_recently_viewed");
+    const savedUser = localStorage.getItem("nuova_user");
+    const savedOrders = localStorage.getItem("nuova_orders");
     
     const handle = requestAnimationFrame(() => {
       if (savedCart) setCart(JSON.parse(savedCart));
@@ -106,7 +106,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
         if (parsed && (parsed.name === "Roshni Sen" || !parsed.name)) {
           parsed.name = "Admin";
           parsed.email = "admin@example.com";
-          localStorage.setItem("vetpet_user", JSON.stringify(parsed));
+          localStorage.setItem("nuova_user", JSON.stringify(parsed));
         }
         setUser(parsed);
       } else {
@@ -117,7 +117,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
           addresses: DEFAULT_ADDRESSES
         };
         setUser(defaultUser);
-        localStorage.setItem("vetpet_user", JSON.stringify(defaultUser));
+        localStorage.setItem("nuova_user", JSON.stringify(defaultUser));
       }
     });
 
@@ -127,30 +127,30 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
   // Persist actions to localStorage
   const saveCart = (newCart: CartItem[]) => {
     setCart(newCart);
-    localStorage.setItem("vetpet_cart", JSON.stringify(newCart));
+    localStorage.setItem("nuova_cart", JSON.stringify(newCart));
   };
   
   const saveWishlist = (newWishlist: Product[]) => {
     setWishlist(newWishlist);
-    localStorage.setItem("vetpet_wishlist", JSON.stringify(newWishlist));
+    localStorage.setItem("nuova_wishlist", JSON.stringify(newWishlist));
   };
   
   const saveRecentlyViewed = (newRecently: Product[]) => {
     setRecentlyViewed(newRecently);
-    localStorage.setItem("vetpet_recently_viewed", JSON.stringify(newRecently));
+    localStorage.setItem("nuova_recently_viewed", JSON.stringify(newRecently));
   };
 
   const saveOrders = (newOrders: Order[]) => {
     setOrders(newOrders);
-    localStorage.setItem("vetpet_orders", JSON.stringify(newOrders));
+    localStorage.setItem("nuova_orders", JSON.stringify(newOrders));
   };
 
   const saveUser = (newUser: typeof user) => {
     setUser(newUser);
     if (newUser) {
-      localStorage.setItem("vetpet_user", JSON.stringify(newUser));
+      localStorage.setItem("nuova_user", JSON.stringify(newUser));
     } else {
-      localStorage.removeItem("vetpet_user");
+      localStorage.removeItem("nuova_user");
     }
   };
 
@@ -251,7 +251,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
   const logout = () => {
     saveUser(null);
     setOrders([]);
-    localStorage.removeItem("vetpet_orders");
+    localStorage.removeItem("nuova_orders");
   };
 
   // Address operations

@@ -134,7 +134,7 @@ export default function CheckoutPage() {
               Order Placed Successfully!
             </h1>
             <p className="text-sm text-gray-500">
-              Thank you for shopping at VetPet Galleria. Your pet's wellness package is being compiled.
+              Thank you for shopping at Nuova Healthcare. Your pet's wellness package is being compiled.
             </p>
           </div>
 

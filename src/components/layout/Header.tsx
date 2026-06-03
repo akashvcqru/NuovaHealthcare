@@ -362,7 +362,7 @@ export default function Header() {
 
             <div className="border-t border-gray-100 pt-4 flex flex-col gap-2 text-xs text-gray-500">
               <p>📍 Mumbai, Maharashtra, India</p>
-              <p>📞 support@vetpetgalleria.in</p>
+              <p>📞 support@nuovahealthcare.in</p>
             </div>
           </div>
         </div>
